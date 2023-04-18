@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
  import 'package:udemyhomepage/components/item.dart';
 import 'package:flutter/cupertino.dart';
 
-class Udemy extends StatefulWidget {
-  const Udemy({Key? key}) : super(key: key);
+class UdemyScreen extends StatefulWidget {
+  const UdemyScreen({Key? key}) : super(key: key);
   @override
-  State<Udemy> createState() => _UdemyState();
+  State<UdemyScreen> createState() => _UdemyScreenState();
 }
 
-class _UdemyState extends State<Udemy> {
+class _UdemyScreenState extends State<UdemyScreen> {
   int _currentIndex = 0;
   void onTabTapped(int index) {
     setState(() {
@@ -19,7 +19,7 @@ class _UdemyState extends State<Udemy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsets.only(right: 20.0, top: 14),
             child: Text(
@@ -45,7 +45,7 @@ class _UdemyState extends State<Udemy> {
               alignment: Alignment.center,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: const [
                   Text('Future-ready skills on your schedule',style:TextStyle(color: Colors.white,fontSize: 20)),
                   Icon(CupertinoIcons.multiply, color: Colors.white,)
                 ],
@@ -54,7 +54,7 @@ class _UdemyState extends State<Udemy> {
 
       Container(
         child:      BottomNavigationBar(
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.star,),
               label: 'Featured',
@@ -90,7 +90,7 @@ class _UdemyState extends State<Udemy> {
       ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Text('Categories',style: TextStyle(color: Colors.white,fontSize: 43,fontWeight: FontWeight.bold),),
                 Text('see all',style: TextStyle(color: Colors.white,fontSize: 19,fontWeight: FontWeight.bold),)
 
